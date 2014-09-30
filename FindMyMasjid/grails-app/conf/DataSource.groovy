@@ -15,19 +15,55 @@ hibernate {
 
 // environment specific settings
 environments {
-    development {
+	
+    developmenth2 {
         dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
         }
     }
+	
+	
+	development {
+		dataSource {
+			dbCreate = "create"
+			driverClassName = "com.mysql.jdbc.Driver"
+			url = "jdbc:mysql://localhost:3306/masjid_dev_db"
+			username = "root"
+			password = "welcome123"
+			logSql = false
+			formatSql = true
+
+			properties{ jmxEnabled = true; }
+		}
+	}
+
+
+	product {
+		dataSource {
+			dbCreate = "create"
+			driverClassName = "com.mysql.jdbc.Driver"
+			url = "jdbc:mysql://localhost:3306/masjid_prod_db"
+			username = "root"
+			password = "welcome123"
+			logSql = false
+			formatSql = true
+
+			properties{ jmxEnabled = true; }
+		}
+	}
+
+		
+	
+	
     test {
         dataSource {
             dbCreate = "update"
             url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
         }
     }
-    production {
+	
+    productionh2 {
         dataSource {
             dbCreate = "update"
             url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
