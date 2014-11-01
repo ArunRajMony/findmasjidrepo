@@ -199,6 +199,7 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select name="prayer_1_TimingsHour" from="${1..12}" class="range" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_1_TimingsHour')}"/>
+	<b>:</b> 
 	<g:select name="prayer_1_TimingsMinutes" from="${masjidDetailsInstance.constraints.prayer_1_TimingsMinutes.inList}" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_1_TimingsMinutes')}" valueMessagePrefix="masjidDetails.prayer_1_TimingsMinutes"/>
 	<g:select name="prayer_1_TimingsAMPM" from="${masjidDetailsInstance.constraints.prayer_1_TimingsAMPM.inList}" value="${masjidDetailsInstance?.prayer_1_TimingsAMPM}" valueMessagePrefix="masjidDetails.prayer_1_TimingsAMPM" noSelection="['': '']"/>
 </div>
@@ -211,6 +212,7 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select name="prayer_2_TimingsHour" from="${1..12}" class="range" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_2_TimingsHour')}"/>
+	<b>:</b> 
 	<g:select name="prayer_2_TimingsMinutes" from="${masjidDetailsInstance.constraints.prayer_2_TimingsMinutes.inList}" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_2_TimingsMinutes')}" valueMessagePrefix="masjidDetails.prayer_2_TimingsMinutes"/>
 	<g:select name="prayer_2_TimingsAMPM" from="${masjidDetailsInstance.constraints.prayer_2_TimingsAMPM.inList}" value="${masjidDetailsInstance?.prayer_2_TimingsAMPM}" valueMessagePrefix="masjidDetails.prayer_2_TimingsAMPM" noSelection="['': '']"/>
 </div>
@@ -223,6 +225,7 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select name="prayer_3_TimingsHour" from="${1..12}" class="range" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_3_TimingsHour')}"/>
+	<b>:</b>
 	<g:select name="prayer_3_TimingsMinutes" from="${masjidDetailsInstance.constraints.prayer_3_TimingsMinutes.inList}" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_3_TimingsMinutes')}" valueMessagePrefix="masjidDetails.prayer_3_TimingsMinutes"/>
 	<g:select name="prayer_3_TimingsAMPM" from="${masjidDetailsInstance.constraints.prayer_3_TimingsAMPM.inList}" value="${masjidDetailsInstance?.prayer_3_TimingsAMPM}" valueMessagePrefix="masjidDetails.prayer_3_TimingsAMPM" noSelection="['': '']"/>
 </div>
@@ -234,6 +237,7 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select name="prayer_4_TimingsHour" from="${1..12}" class="range" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_4_TimingsHour')}"/>
+	<b>:</b>
 	<g:select name="prayer_4_TimingsMinutes" from="${masjidDetailsInstance.constraints.prayer_4_TimingsMinutes.inList}" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_4_TimingsMinutes')}" valueMessagePrefix="masjidDetails.prayer_4_TimingsMinutes"/>
 	<g:select name="prayer_4_TimingsAMPM" from="${masjidDetailsInstance.constraints.prayer_4_TimingsAMPM.inList}" value="${masjidDetailsInstance?.prayer_4_TimingsAMPM}" valueMessagePrefix="masjidDetails.prayer_4_TimingsAMPM" noSelection="['': '']"/>
 </div>
@@ -245,6 +249,7 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select name="prayer_5_TimingsHour" from="${1..12}" class="range" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_5_TimingsHour')}"/>
+	<b>:</b>
 	<g:select name="prayer_5_TimingsMinutes" from="${masjidDetailsInstance.constraints.prayer_5_TimingsMinutes.inList}" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_5_TimingsMinutes')}" valueMessagePrefix="masjidDetails.prayer_5_TimingsMinutes"/>
 	<g:select name="prayer_5_TimingsAMPM" from="${masjidDetailsInstance.constraints.prayer_5_TimingsAMPM.inList}" value="${masjidDetailsInstance?.prayer_5_TimingsAMPM}" valueMessagePrefix="masjidDetails.prayer_5_TimingsAMPM" noSelection="['': '']"/>
 </div>
@@ -256,6 +261,7 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select name="prayer_FridayNoon_TimingsHour" from="${1..12}" class="range" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_FridayNoon_TimingsHour')}"/>
+	<b>:</b>
 	<g:select name="prayer_FridayNoon_TimingsMinutes" from="${masjidDetailsInstance.constraints.prayer_FridayNoon_TimingsMinutes.inList}" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_FridayNoon_TimingsMinutes')}" valueMessagePrefix="masjidDetails.prayer_FridayNoon_TimingsMinutes"/>
 	<g:select name="prayer_FridayNoon_TimingsAMPM" from="${masjidDetailsInstance.constraints.prayer_FridayNoon_TimingsAMPM.inList}" value="${masjidDetailsInstance?.prayer_FridayNoon_TimingsAMPM}" valueMessagePrefix="masjidDetails.prayer_FridayNoon_TimingsAMPM" noSelection="['': '']"/>
 </div>
@@ -267,6 +273,7 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select name="prayer_jummah_TimingsHour" from="${1..12}" class="range" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_jummah_TimingsHour')}"/>
+	<b>:</b>
 	<g:select name="prayer_jummah_TimingsMinutes" from="${masjidDetailsInstance.constraints.prayer_jummah_TimingsMinutes.inList}" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_jummah_TimingsMinutes')}" valueMessagePrefix="masjidDetails.prayer_jummah_TimingsMinutes"/>
 	<g:select name="prayer_jummah_TimingsAMPM" from="${masjidDetailsInstance.constraints.prayer_jummah_TimingsAMPM.inList}" value="${masjidDetailsInstance?.prayer_jummah_TimingsAMPM}" valueMessagePrefix="masjidDetails.prayer_jummah_TimingsAMPM" noSelection="['': '']"/>
 </div>
