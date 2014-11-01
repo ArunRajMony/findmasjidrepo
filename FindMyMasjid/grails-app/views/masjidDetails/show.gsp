@@ -212,92 +212,191 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${masjidDetailsInstance?.prayerTimings1Hour}">
+				<g:if test="${masjidDetailsInstance?.prayer_1_TimingsHour}">
 				<li class="fieldcontain">
-					<span id="prayerTimings1Hour-label" class="property-label"><g:message code="masjidDetails.prayerTimings1Hour.label" default="Prayer Timings1 Hour" /></span>
+					<span id="prayer_1_TimingsHour-label" class="property-label"><g:message code="masjidDetails.prayer_1_TimingsHour.label" default="Prayer1 Timings Hour" /></span>
 					
-						<span class="property-value" aria-labelledby="prayerTimings1Hour-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayerTimings1Hour"/></span>
+						<span class="property-value" aria-labelledby="prayer_1_TimingsHour-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayer_1_TimingsHour"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${masjidDetailsInstance?.prayerTimings1Minutes}">
+				<g:if test="${masjidDetailsInstance?.prayer_1_TimingsMinutes}">
 				<li class="fieldcontain">
-					<span id="prayerTimings1Minutes-label" class="property-label"><g:message code="masjidDetails.prayerTimings1Minutes.label" default="Prayer Timings1 Minutes" /></span>
+					<span id="prayer_1_TimingsMinutes-label" class="property-label"><g:message code="masjidDetails.prayer_1_TimingsMinutes.label" default="Prayer1 Timings Minutes" /></span>
 					
-						<span class="property-value" aria-labelledby="prayerTimings1Minutes-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayerTimings1Minutes"/></span>
+						<span class="property-value" aria-labelledby="prayer_1_TimingsMinutes-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayer_1_TimingsMinutes"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${masjidDetailsInstance?.prayerTimings1AMPM}">
+				<g:if test="${masjidDetailsInstance?.prayer_1_TimingsAMPM}">
 				<li class="fieldcontain">
-					<span id="prayerTimings1AMPM-label" class="property-label"><g:message code="masjidDetails.prayerTimings1AMPM.label" default="Prayer Timings1 AMPM" /></span>
+					<span id="prayer_1_TimingsAMPM-label" class="property-label"><g:message code="masjidDetails.prayer_1_TimingsAMPM.label" default="Prayer1 Timings AMPM" /></span>
 					
-						<span class="property-value" aria-labelledby="prayerTimings1AMPM-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayerTimings1AMPM"/></span>
+						<span class="property-value" aria-labelledby="prayer_1_TimingsAMPM-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayer_1_TimingsAMPM"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${masjidDetailsInstance?.prayerTimings2}">
+				<g:if test="${masjidDetailsInstance?.prayer_2_TimingsHour}">
 				<li class="fieldcontain">
-					<span id="prayerTimings2-label" class="property-label"><g:message code="masjidDetails.prayerTimings2.label" default="Prayer Timings2" /></span>
+					<span id="prayer_2_TimingsHour-label" class="property-label"><g:message code="masjidDetails.prayer_2_TimingsHour.label" default="Prayer2 Timings Hour" /></span>
 					
-						<span class="property-value" aria-labelledby="prayerTimings2-label"><g:formatDate date="${masjidDetailsInstance?.prayerTimings2}" /></span>
+						<span class="property-value" aria-labelledby="prayer_2_TimingsHour-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayer_2_TimingsHour"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${masjidDetailsInstance?.prayerTimings3}">
+				<g:if test="${masjidDetailsInstance?.prayer_2_TimingsMinutes}">
 				<li class="fieldcontain">
-					<span id="prayerTimings3-label" class="property-label"><g:message code="masjidDetails.prayerTimings3.label" default="Prayer Timings3" /></span>
+					<span id="prayer_2_TimingsMinutes-label" class="property-label"><g:message code="masjidDetails.prayer_2_TimingsMinutes.label" default="Prayer2 Timings Minutes" /></span>
 					
-						<span class="property-value" aria-labelledby="prayerTimings3-label"><g:formatDate date="${masjidDetailsInstance?.prayerTimings3}" /></span>
+						<span class="property-value" aria-labelledby="prayer_2_TimingsMinutes-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayer_2_TimingsMinutes"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${masjidDetailsInstance?.prayerTimings4}">
+				<g:if test="${masjidDetailsInstance?.prayer_2_TimingsAMPM}">
 				<li class="fieldcontain">
-					<span id="prayerTimings4-label" class="property-label"><g:message code="masjidDetails.prayerTimings4.label" default="Prayer Timings4" /></span>
+					<span id="prayer_2_TimingsAMPM-label" class="property-label"><g:message code="masjidDetails.prayer_2_TimingsAMPM.label" default="Prayer2 Timings AMPM" /></span>
 					
-						<span class="property-value" aria-labelledby="prayerTimings4-label"><g:formatDate date="${masjidDetailsInstance?.prayerTimings4}" /></span>
+						<span class="property-value" aria-labelledby="prayer_2_TimingsAMPM-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayer_2_TimingsAMPM"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${masjidDetailsInstance?.prayerTimings5}">
+				<g:if test="${masjidDetailsInstance?.prayer_3_TimingsHour}">
 				<li class="fieldcontain">
-					<span id="prayerTimings5-label" class="property-label"><g:message code="masjidDetails.prayerTimings5.label" default="Prayer Timings5" /></span>
+					<span id="prayer_3_TimingsHour-label" class="property-label"><g:message code="masjidDetails.prayer_3_TimingsHour.label" default="Prayer3 Timings Hour" /></span>
 					
-						<span class="property-value" aria-labelledby="prayerTimings5-label"><g:formatDate date="${masjidDetailsInstance?.prayerTimings5}" /></span>
+						<span class="property-value" aria-labelledby="prayer_3_TimingsHour-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayer_3_TimingsHour"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${masjidDetailsInstance?.prayerTimings6}">
+				<g:if test="${masjidDetailsInstance?.prayer_3_TimingsMinutes}">
 				<li class="fieldcontain">
-					<span id="prayerTimings6-label" class="property-label"><g:message code="masjidDetails.prayerTimings6.label" default="Prayer Timings6" /></span>
+					<span id="prayer_3_TimingsMinutes-label" class="property-label"><g:message code="masjidDetails.prayer_3_TimingsMinutes.label" default="Prayer3 Timings Minutes" /></span>
 					
-						<span class="property-value" aria-labelledby="prayerTimings6-label"><g:formatDate date="${masjidDetailsInstance?.prayerTimings6}" /></span>
+						<span class="property-value" aria-labelledby="prayer_3_TimingsMinutes-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayer_3_TimingsMinutes"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${masjidDetailsInstance?.prayerTimingsFridayNoon}">
+				<g:if test="${masjidDetailsInstance?.prayer_3_TimingsAMPM}">
 				<li class="fieldcontain">
-					<span id="prayerTimingsFridayNoon-label" class="property-label"><g:message code="masjidDetails.prayerTimingsFridayNoon.label" default="Prayer Timings Friday Noon" /></span>
+					<span id="prayer_3_TimingsAMPM-label" class="property-label"><g:message code="masjidDetails.prayer_3_TimingsAMPM.label" default="Prayer3 Timings AMPM" /></span>
 					
-						<span class="property-value" aria-labelledby="prayerTimingsFridayNoon-label"><g:formatDate date="${masjidDetailsInstance?.prayerTimingsFridayNoon}" /></span>
+						<span class="property-value" aria-labelledby="prayer_3_TimingsAMPM-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayer_3_TimingsAMPM"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${masjidDetailsInstance?.jummahTime}">
+				<g:if test="${masjidDetailsInstance?.prayer_4_TimingsHour}">
 				<li class="fieldcontain">
-					<span id="jummahTime-label" class="property-label"><g:message code="masjidDetails.jummahTime.label" default="Jummah Time" /></span>
+					<span id="prayer_4_TimingsHour-label" class="property-label"><g:message code="masjidDetails.prayer_4_TimingsHour.label" default="Prayer4 Timings Hour" /></span>
 					
-						<span class="property-value" aria-labelledby="jummahTime-label"><g:formatDate date="${masjidDetailsInstance?.jummahTime}" /></span>
+						<span class="property-value" aria-labelledby="prayer_4_TimingsHour-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayer_4_TimingsHour"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${masjidDetailsInstance?.prayer_4_TimingsMinutes}">
+				<li class="fieldcontain">
+					<span id="prayer_4_TimingsMinutes-label" class="property-label"><g:message code="masjidDetails.prayer_4_TimingsMinutes.label" default="Prayer4 Timings Minutes" /></span>
+					
+						<span class="property-value" aria-labelledby="prayer_4_TimingsMinutes-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayer_4_TimingsMinutes"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${masjidDetailsInstance?.prayer_4_TimingsAMPM}">
+				<li class="fieldcontain">
+					<span id="prayer_4_TimingsAMPM-label" class="property-label"><g:message code="masjidDetails.prayer_4_TimingsAMPM.label" default="Prayer4 Timings AMPM" /></span>
+					
+						<span class="property-value" aria-labelledby="prayer_4_TimingsAMPM-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayer_4_TimingsAMPM"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${masjidDetailsInstance?.prayer_5_TimingsHour}">
+				<li class="fieldcontain">
+					<span id="prayer_5_TimingsHour-label" class="property-label"><g:message code="masjidDetails.prayer_5_TimingsHour.label" default="Prayer5 Timings Hour" /></span>
+					
+						<span class="property-value" aria-labelledby="prayer_5_TimingsHour-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayer_5_TimingsHour"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${masjidDetailsInstance?.prayer_5_TimingsMinutes}">
+				<li class="fieldcontain">
+					<span id="prayer_5_TimingsMinutes-label" class="property-label"><g:message code="masjidDetails.prayer_5_TimingsMinutes.label" default="Prayer5 Timings Minutes" /></span>
+					
+						<span class="property-value" aria-labelledby="prayer_5_TimingsMinutes-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayer_5_TimingsMinutes"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${masjidDetailsInstance?.prayer_5_TimingsAMPM}">
+				<li class="fieldcontain">
+					<span id="prayer_5_TimingsAMPM-label" class="property-label"><g:message code="masjidDetails.prayer_5_TimingsAMPM.label" default="Prayer5 Timings AMPM" /></span>
+					
+						<span class="property-value" aria-labelledby="prayer_5_TimingsAMPM-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayer_5_TimingsAMPM"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${masjidDetailsInstance?.prayer_FridayNoon_TimingsHour}">
+				<li class="fieldcontain">
+					<span id="prayer_FridayNoon_TimingsHour-label" class="property-label"><g:message code="masjidDetails.prayer_FridayNoon_TimingsHour.label" default="Prayer Friday Noon Timings Hour" /></span>
+					
+						<span class="property-value" aria-labelledby="prayer_FridayNoon_TimingsHour-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayer_FridayNoon_TimingsHour"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${masjidDetailsInstance?.prayer_FridayNoon_TimingsMinutes}">
+				<li class="fieldcontain">
+					<span id="prayer_FridayNoon_TimingsMinutes-label" class="property-label"><g:message code="masjidDetails.prayer_FridayNoon_TimingsMinutes.label" default="Prayer Friday Noon Timings Minutes" /></span>
+					
+						<span class="property-value" aria-labelledby="prayer_FridayNoon_TimingsMinutes-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayer_FridayNoon_TimingsMinutes"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${masjidDetailsInstance?.prayer_FridayNoon_TimingsAMPM}">
+				<li class="fieldcontain">
+					<span id="prayer_FridayNoon_TimingsAMPM-label" class="property-label"><g:message code="masjidDetails.prayer_FridayNoon_TimingsAMPM.label" default="Prayer Friday Noon Timings AMPM" /></span>
+					
+						<span class="property-value" aria-labelledby="prayer_FridayNoon_TimingsAMPM-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayer_FridayNoon_TimingsAMPM"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${masjidDetailsInstance?.prayer_jummah_TimingsHour}">
+				<li class="fieldcontain">
+					<span id="prayer_jummah_TimingsHour-label" class="property-label"><g:message code="masjidDetails.prayer_jummah_TimingsHour.label" default="Prayerjummah Timings Hour" /></span>
+					
+						<span class="property-value" aria-labelledby="prayer_jummah_TimingsHour-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayer_jummah_TimingsHour"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${masjidDetailsInstance?.prayer_jummah_TimingsMinutes}">
+				<li class="fieldcontain">
+					<span id="prayer_jummah_TimingsMinutes-label" class="property-label"><g:message code="masjidDetails.prayer_jummah_TimingsMinutes.label" default="Prayerjummah Timings Minutes" /></span>
+					
+						<span class="property-value" aria-labelledby="prayer_jummah_TimingsMinutes-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayer_jummah_TimingsMinutes"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${masjidDetailsInstance?.prayer_jummah_TimingsAMPM}">
+				<li class="fieldcontain">
+					<span id="prayer_jummah_TimingsAMPM-label" class="property-label"><g:message code="masjidDetails.prayer_jummah_TimingsAMPM.label" default="Prayerjummah Timings AMPM" /></span>
+					
+						<span class="property-value" aria-labelledby="prayer_jummah_TimingsAMPM-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayer_jummah_TimingsAMPM"/></span>
 					
 				</li>
 				</g:if>

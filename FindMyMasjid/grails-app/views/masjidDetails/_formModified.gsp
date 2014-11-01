@@ -191,194 +191,87 @@
 
 </div>
 
+<!-- start of modified fields related to prayer time -->
+
 <div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'prayer_1_TimingsHour', 'error')} required">
 	<label for="prayer_1_TimingsHour">
 		<g:message code="masjidDetails.prayer_1_TimingsHour.label" default="Prayer1 Timings Hour" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select name="prayer_1_TimingsHour" from="${1..12}" class="range" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_1_TimingsHour')}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'prayer_1_TimingsMinutes', 'error')} required">
-	<label for="prayer_1_TimingsMinutes">
-		<g:message code="masjidDetails.prayer_1_TimingsMinutes.label" default="Prayer1 Timings Minutes" />
-		<span class="required-indicator">*</span>
-	</label>
 	<g:select name="prayer_1_TimingsMinutes" from="${masjidDetailsInstance.constraints.prayer_1_TimingsMinutes.inList}" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_1_TimingsMinutes')}" valueMessagePrefix="masjidDetails.prayer_1_TimingsMinutes"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'prayer_1_TimingsAMPM', 'error')} ">
-	<label for="prayer_1_TimingsAMPM">
-		<g:message code="masjidDetails.prayer_1_TimingsAMPM.label" default="Prayer1 Timings AMPM" />
-		
-	</label>
 	<g:select name="prayer_1_TimingsAMPM" from="${masjidDetailsInstance.constraints.prayer_1_TimingsAMPM.inList}" value="${masjidDetailsInstance?.prayer_1_TimingsAMPM}" valueMessagePrefix="masjidDetails.prayer_1_TimingsAMPM" noSelection="['': '']"/>
-
 </div>
+
+
 
 <div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'prayer_2_TimingsHour', 'error')} required">
 	<label for="prayer_2_TimingsHour">
-		<g:message code="masjidDetails.prayer_2_TimingsHour.label" default="Prayer2 Timings Hour" />
+		<g:message code="masjidDetails.prayer_2_TimingsHour.label" default="Prayer 2 Timings Hour" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select name="prayer_2_TimingsHour" from="${1..12}" class="range" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_2_TimingsHour')}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'prayer_2_TimingsMinutes', 'error')} required">
-	<label for="prayer_2_TimingsMinutes">
-		<g:message code="masjidDetails.prayer_2_TimingsMinutes.label" default="Prayer2 Timings Minutes" />
-		<span class="required-indicator">*</span>
-	</label>
 	<g:select name="prayer_2_TimingsMinutes" from="${masjidDetailsInstance.constraints.prayer_2_TimingsMinutes.inList}" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_2_TimingsMinutes')}" valueMessagePrefix="masjidDetails.prayer_2_TimingsMinutes"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'prayer_2_TimingsAMPM', 'error')} ">
-	<label for="prayer_2_TimingsAMPM">
-		<g:message code="masjidDetails.prayer_2_TimingsAMPM.label" default="Prayer2 Timings AMPM" />
-		
-	</label>
 	<g:select name="prayer_2_TimingsAMPM" from="${masjidDetailsInstance.constraints.prayer_2_TimingsAMPM.inList}" value="${masjidDetailsInstance?.prayer_2_TimingsAMPM}" valueMessagePrefix="masjidDetails.prayer_2_TimingsAMPM" noSelection="['': '']"/>
-
 </div>
+
+
 
 <div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'prayer_3_TimingsHour', 'error')} required">
 	<label for="prayer_3_TimingsHour">
-		<g:message code="masjidDetails.prayer_3_TimingsHour.label" default="Prayer3 Timings Hour" />
+		<g:message code="masjidDetails.prayer_3_TimingsHour.label" default="Prayer 3 Timings Hour" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select name="prayer_3_TimingsHour" from="${1..12}" class="range" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_3_TimingsHour')}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'prayer_3_TimingsMinutes', 'error')} required">
-	<label for="prayer_3_TimingsMinutes">
-		<g:message code="masjidDetails.prayer_3_TimingsMinutes.label" default="Prayer3 Timings Minutes" />
-		<span class="required-indicator">*</span>
-	</label>
 	<g:select name="prayer_3_TimingsMinutes" from="${masjidDetailsInstance.constraints.prayer_3_TimingsMinutes.inList}" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_3_TimingsMinutes')}" valueMessagePrefix="masjidDetails.prayer_3_TimingsMinutes"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'prayer_3_TimingsAMPM', 'error')} ">
-	<label for="prayer_3_TimingsAMPM">
-		<g:message code="masjidDetails.prayer_3_TimingsAMPM.label" default="Prayer3 Timings AMPM" />
-		
-	</label>
 	<g:select name="prayer_3_TimingsAMPM" from="${masjidDetailsInstance.constraints.prayer_3_TimingsAMPM.inList}" value="${masjidDetailsInstance?.prayer_3_TimingsAMPM}" valueMessagePrefix="masjidDetails.prayer_3_TimingsAMPM" noSelection="['': '']"/>
-
 </div>
+
 
 <div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'prayer_4_TimingsHour', 'error')} required">
 	<label for="prayer_4_TimingsHour">
-		<g:message code="masjidDetails.prayer_4_TimingsHour.label" default="Prayer4 Timings Hour" />
+		<g:message code="masjidDetails.prayer_4_TimingsHour.label" default="Prayer 4 Timings Hour" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select name="prayer_4_TimingsHour" from="${1..12}" class="range" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_4_TimingsHour')}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'prayer_4_TimingsMinutes', 'error')} required">
-	<label for="prayer_4_TimingsMinutes">
-		<g:message code="masjidDetails.prayer_4_TimingsMinutes.label" default="Prayer4 Timings Minutes" />
-		<span class="required-indicator">*</span>
-	</label>
 	<g:select name="prayer_4_TimingsMinutes" from="${masjidDetailsInstance.constraints.prayer_4_TimingsMinutes.inList}" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_4_TimingsMinutes')}" valueMessagePrefix="masjidDetails.prayer_4_TimingsMinutes"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'prayer_4_TimingsAMPM', 'error')} ">
-	<label for="prayer_4_TimingsAMPM">
-		<g:message code="masjidDetails.prayer_4_TimingsAMPM.label" default="Prayer4 Timings AMPM" />
-		
-	</label>
 	<g:select name="prayer_4_TimingsAMPM" from="${masjidDetailsInstance.constraints.prayer_4_TimingsAMPM.inList}" value="${masjidDetailsInstance?.prayer_4_TimingsAMPM}" valueMessagePrefix="masjidDetails.prayer_4_TimingsAMPM" noSelection="['': '']"/>
-
 </div>
+
 
 <div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'prayer_5_TimingsHour', 'error')} required">
 	<label for="prayer_5_TimingsHour">
-		<g:message code="masjidDetails.prayer_5_TimingsHour.label" default="Prayer5 Timings Hour" />
+		<g:message code="masjidDetails.prayer_5_TimingsHour.label" default="Prayer 5 Timings Hour" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select name="prayer_5_TimingsHour" from="${1..12}" class="range" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_5_TimingsHour')}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'prayer_5_TimingsMinutes', 'error')} required">
-	<label for="prayer_5_TimingsMinutes">
-		<g:message code="masjidDetails.prayer_5_TimingsMinutes.label" default="Prayer5 Timings Minutes" />
-		<span class="required-indicator">*</span>
-	</label>
 	<g:select name="prayer_5_TimingsMinutes" from="${masjidDetailsInstance.constraints.prayer_5_TimingsMinutes.inList}" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_5_TimingsMinutes')}" valueMessagePrefix="masjidDetails.prayer_5_TimingsMinutes"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'prayer_5_TimingsAMPM', 'error')} ">
-	<label for="prayer_5_TimingsAMPM">
-		<g:message code="masjidDetails.prayer_5_TimingsAMPM.label" default="Prayer5 Timings AMPM" />
-		
-	</label>
 	<g:select name="prayer_5_TimingsAMPM" from="${masjidDetailsInstance.constraints.prayer_5_TimingsAMPM.inList}" value="${masjidDetailsInstance?.prayer_5_TimingsAMPM}" valueMessagePrefix="masjidDetails.prayer_5_TimingsAMPM" noSelection="['': '']"/>
-
 </div>
+
 
 <div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'prayer_FridayNoon_TimingsHour', 'error')} required">
 	<label for="prayer_FridayNoon_TimingsHour">
-		<g:message code="masjidDetails.prayer_FridayNoon_TimingsHour.label" default="Prayer Friday Noon Timings Hour" />
+		<g:message code="masjidDetails.prayer_FridayNoon_TimingsHour.label" default="FRiday prayer Timings Hour" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select name="prayer_FridayNoon_TimingsHour" from="${1..12}" class="range" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_FridayNoon_TimingsHour')}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'prayer_FridayNoon_TimingsMinutes', 'error')} required">
-	<label for="prayer_FridayNoon_TimingsMinutes">
-		<g:message code="masjidDetails.prayer_FridayNoon_TimingsMinutes.label" default="Prayer Friday Noon Timings Minutes" />
-		<span class="required-indicator">*</span>
-	</label>
 	<g:select name="prayer_FridayNoon_TimingsMinutes" from="${masjidDetailsInstance.constraints.prayer_FridayNoon_TimingsMinutes.inList}" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_FridayNoon_TimingsMinutes')}" valueMessagePrefix="masjidDetails.prayer_FridayNoon_TimingsMinutes"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'prayer_FridayNoon_TimingsAMPM', 'error')} ">
-	<label for="prayer_FridayNoon_TimingsAMPM">
-		<g:message code="masjidDetails.prayer_FridayNoon_TimingsAMPM.label" default="Prayer Friday Noon Timings AMPM" />
-		
-	</label>
 	<g:select name="prayer_FridayNoon_TimingsAMPM" from="${masjidDetailsInstance.constraints.prayer_FridayNoon_TimingsAMPM.inList}" value="${masjidDetailsInstance?.prayer_FridayNoon_TimingsAMPM}" valueMessagePrefix="masjidDetails.prayer_FridayNoon_TimingsAMPM" noSelection="['': '']"/>
-
 </div>
+
 
 <div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'prayer_jummah_TimingsHour', 'error')} required">
 	<label for="prayer_jummah_TimingsHour">
-		<g:message code="masjidDetails.prayer_jummah_TimingsHour.label" default="Prayerjummah Timings Hour" />
+		<g:message code="masjidDetails.prayer_jummah_TimingsHour.label" default="Jummah prayer Timings Hour" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select name="prayer_jummah_TimingsHour" from="${1..12}" class="range" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_jummah_TimingsHour')}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'prayer_jummah_TimingsMinutes', 'error')} required">
-	<label for="prayer_jummah_TimingsMinutes">
-		<g:message code="masjidDetails.prayer_jummah_TimingsMinutes.label" default="Prayerjummah Timings Minutes" />
-		<span class="required-indicator">*</span>
-	</label>
 	<g:select name="prayer_jummah_TimingsMinutes" from="${masjidDetailsInstance.constraints.prayer_jummah_TimingsMinutes.inList}" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayer_jummah_TimingsMinutes')}" valueMessagePrefix="masjidDetails.prayer_jummah_TimingsMinutes"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'prayer_jummah_TimingsAMPM', 'error')} ">
-	<label for="prayer_jummah_TimingsAMPM">
-		<g:message code="masjidDetails.prayer_jummah_TimingsAMPM.label" default="Prayerjummah Timings AMPM" />
-		
-	</label>
 	<g:select name="prayer_jummah_TimingsAMPM" from="${masjidDetailsInstance.constraints.prayer_jummah_TimingsAMPM.inList}" value="${masjidDetailsInstance?.prayer_jummah_TimingsAMPM}" valueMessagePrefix="masjidDetails.prayer_jummah_TimingsAMPM" noSelection="['': '']"/>
-
 </div>
+
+<!-- end of modified fields related to prayer time -->
 
 <div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'contactPersonName', 'error')} required">
 	<label for="contactPersonName">
