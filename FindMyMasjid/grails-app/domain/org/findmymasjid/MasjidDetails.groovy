@@ -6,7 +6,7 @@ import java.util.Map;
 class MasjidDetails {
 
 	static mapWith = "mongo"
-	
+
 	static constraints = {
 
 		masjidName nullable:false
@@ -26,7 +26,7 @@ class MasjidDetails {
 		longitude nullable:true, matches: "^-?([1]?[1-7][1-9]|[1]?[1-8][0]|[1-9]?[0-9])\\.{1}\\d{1,6}"
 		location nullable:true, display:false
 		googleLocationLink nullable:false,widget:'textarea' ,  url:true //matches:"Reg = /^https?\\:\\/\\/(www\\.|maps\\.)?google(\\.[a-z]+){1,2}\\/maps\\/?\\?([^&]+&)*(ll=-?[0-9]{1,2}\\.[0-9]+,-?[0-9]{1,2}\\.[0-9]+|q=[^&]+)+(\$|&)/;"
-		  //TODO use regular expression for validating a proper google maps link and not just an "url:true"
+		//TODO use regular expression for validating a proper google maps link and not just an "url:true"
 
 		phone1 nullable:false , matches:"^[0-9]*" ,  size: 10..14
 		phone2 nullable:true, matches:"^[0-9]*" , size: 10..14
@@ -75,7 +75,13 @@ class MasjidDetails {
 			'Hindi'
 		]
 
-		prayerTimings1 nullable:false, format:'yyyy-MM'
+
+		prayerTimings1Hour nullable:true, range:1..12
+		prayerTimings1Minutes nullable:true, range:0..59
+		prayerTimings1AMPM nullable:true , inList:['AM', 'PM']
+		prayerTimings1 nullable:true, display:false
+
+		//prayerTimings1 nullable:false, format:'yyyy-MM'
 		prayerTimings2 nullable:false
 		prayerTimings3 nullable:true
 		prayerTimings4 nullable:true
@@ -99,7 +105,7 @@ class MasjidDetails {
 		otherInfo nullable:true, widget:'textarea'
 
 	}
-	
+
 	static mapping = {
 		pincode index:true
 		location geoIndex:'2d'
@@ -136,7 +142,13 @@ class MasjidDetails {
 	//Photo TODO
 	String languageOfPrayer
 
-	Date prayerTimings1
+
+	int prayerTimings1Hour
+	int prayerTimings1Minutes
+	String prayerTimings1AMPM
+	String prayerTimings1
+
+
 	Date prayerTimings2
 	Date prayerTimings3
 	Date prayerTimings4
@@ -159,12 +171,19 @@ class MasjidDetails {
 	String landmark
 	String otherInfo
 
-	//location:[lat:13.0839d,long:80.2700d])
-	
+
+
 	Map getLocation(){
-		def map = ['lat' : latitude,'long' : longitude] 
-		return map
+		def mapp = [:]
+		if(latitude != null && longitude != null){
+			double dLat = Double.valueOf(latitude).doubleValue()
+			double dLong = Double.valueOf(longitude).doubleValue()
+
+			mapp = [:]
+			mapp = ["lat" : dLat, "long": dLong]
+		}
+	
+		return mapp
 	}
 	
-
 }

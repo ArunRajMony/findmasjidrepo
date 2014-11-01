@@ -191,12 +191,30 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'prayerTimings1', 'error')} required">
-	<label for="prayerTimings1">
-		<g:message code="masjidDetails.prayerTimings1.label" default="Prayer Timings1" />
+<div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'prayerTimings1Hour', 'error')} required">
+	<label for="prayerTimings1Hour">
+		<g:message code="masjidDetails.prayerTimings1Hour.label" default="Prayer Timings1 Hour" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="prayerTimings1" format="yyyy-MM" precision="day"  value="${masjidDetailsInstance?.prayerTimings1}"  />
+	<g:select name="prayerTimings1Hour" from="${1..12}" class="range" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayerTimings1Hour')}"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'prayerTimings1Minutes', 'error')} required">
+	<label for="prayerTimings1Minutes">
+		<g:message code="masjidDetails.prayerTimings1Minutes.label" default="Prayer Timings1 Minutes" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select name="prayerTimings1Minutes" from="${0..59}" class="range" required="" value="${fieldValue(bean: masjidDetailsInstance, field: 'prayerTimings1Minutes')}"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: masjidDetailsInstance, field: 'prayerTimings1AMPM', 'error')} ">
+	<label for="prayerTimings1AMPM">
+		<g:message code="masjidDetails.prayerTimings1AMPM.label" default="Prayer Timings1 AMPM" />
+		
+	</label>
+	<g:select name="prayerTimings1AMPM" from="${masjidDetailsInstance.constraints.prayerTimings1AMPM.inList}" value="${masjidDetailsInstance?.prayerTimings1AMPM}" valueMessagePrefix="masjidDetails.prayerTimings1AMPM" noSelection="['': '']"/>
 
 </div>
 

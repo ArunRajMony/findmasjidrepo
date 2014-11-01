@@ -8,98 +8,110 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 class MasjidDetailsController {
 
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+	static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-    def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        respond MasjidDetails.list(params), model:[masjidDetailsInstanceCount: MasjidDetails.count()]
-    }
+	def index(Integer max) {
+		params.max = Math.min(max ?: 10, 100)
+		respond MasjidDetails.list(params), model:[masjidDetailsInstanceCount: MasjidDetails.count()]
+	}
 
-    def show(MasjidDetails masjidDetailsInstance) {
-        respond masjidDetailsInstance
-    }
+	def show(MasjidDetails masjidDetailsInstance) {
+		respond masjidDetailsInstance
+	}
 
-    def create() {
-        respond new MasjidDetails(params)
-    }
+	def create() {
+		respond new MasjidDetails(params)
+	}
 
-    @Transactional
-    def save(MasjidDetails masjidDetailsInstance) {
-        if (masjidDetailsInstance == null) {
-            notFound()
-            return
-        }
+	@Transactional
+	def save(MasjidDetails masjidDetailsInstance) {
+		if (masjidDetailsInstance == null) {
+			notFound()
+			return
+		}
 
-        if (masjidDetailsInstance.hasErrors()) {
+		if (masjidDetailsInstance.hasErrors()) {
 			println "has errors"
-            respond masjidDetailsInstance.errors, view:'create'
-            return
-        }
+			respond masjidDetailsInstance.errors, view:'create'
+			return
+		}
 
-        masjidDetailsInstance.save flush:true
+		masjidDetailsInstance.save flush:true
 
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'masjidDetails.label', default: 'MasjidDetails'), masjidDetailsInstance.id])
-                redirect masjidDetailsInstance
-            }
-            '*' { respond masjidDetailsInstance, [status: CREATED] }
-        }
-    }
+		request.withFormat {
+			form multipartForm {
+				flash.message = message(code: 'default.created.message', args: [
+					message(code: 'masjidDetails.label', default: 'MasjidDetails'),
+					masjidDetailsInstance.id
+				])
+				redirect masjidDetailsInstance
+			}
+			'*' { respond masjidDetailsInstance, [status: CREATED] }
+		}
+	}
 
-    def edit(MasjidDetails masjidDetailsInstance) {
-        respond masjidDetailsInstance
-    }
+	def edit(MasjidDetails masjidDetailsInstance) {
+		respond masjidDetailsInstance
+	}
 
-    @Transactional
-    def update(MasjidDetails masjidDetailsInstance) {
-        if (masjidDetailsInstance == null) {
-            notFound()
-            return
-        }
+	@Transactional
+	def update(MasjidDetails masjidDetailsInstance) {
+		if (masjidDetailsInstance == null) {
+			notFound()
+			return
+		}
 
-        if (masjidDetailsInstance.hasErrors()) {
-            respond masjidDetailsInstance.errors, view:'edit'
-            return
-        }
+		if (masjidDetailsInstance.hasErrors()) {
+			respond masjidDetailsInstance.errors, view:'edit'
+			return
+		}
 
-        masjidDetailsInstance.save flush:true
+		masjidDetailsInstance.save flush:true
 
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'MasjidDetails.label', default: 'MasjidDetails'), masjidDetailsInstance.id])
-                redirect masjidDetailsInstance
-            }
-            '*'{ respond masjidDetailsInstance, [status: OK] }
-        }
-    }
+		request.withFormat {
+			form multipartForm {
+				flash.message = message(code: 'default.updated.message', args: [
+					message(code: 'MasjidDetails.label', default: 'MasjidDetails'),
+					masjidDetailsInstance.id
+				])
+				redirect masjidDetailsInstance
+			}
+			'*'{ respond masjidDetailsInstance, [status: OK] }
+		}
+	}
 
-    @Transactional
-    def delete(MasjidDetails masjidDetailsInstance) {
+	@Transactional
+	def delete(MasjidDetails masjidDetailsInstance) {
 
-        if (masjidDetailsInstance == null) {
-            notFound()
-            return
-        }
+		if (masjidDetailsInstance == null) {
+			notFound()
+			return
+		}
 
-        masjidDetailsInstance.delete flush:true
+		masjidDetailsInstance.delete flush:true
 
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'MasjidDetails.label', default: 'MasjidDetails'), masjidDetailsInstance.id])
-                redirect action:"index", method:"GET"
-            }
-            '*'{ render status: NO_CONTENT }
-        }
-    }
+		request.withFormat {
+			form multipartForm {
+				flash.message = message(code: 'default.deleted.message', args: [
+					message(code: 'MasjidDetails.label', default: 'MasjidDetails'),
+					masjidDetailsInstance.id
+				])
+				redirect action:"index", method:"GET"
+			}
+			'*'{ render status: NO_CONTENT }
+		}
+	}
 
-    protected void notFound() {
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.not.found.message', args: [message(code: 'masjidDetails.label', default: 'MasjidDetails'), params.id])
-                redirect action: "index", method: "GET"
-            }
-            '*'{ render status: NOT_FOUND }
-        }
-    }
+	protected void notFound() {
+		request.withFormat {
+			form multipartForm {
+				flash.message = message(code: 'default.not.found.message', args: [
+					message(code: 'masjidDetails.label', default: 'MasjidDetails'),
+					params.id
+				])
+				redirect action: "index", method: "GET"
+			}
+			'*'{ render status: NOT_FOUND }
+		}
+	}
 }

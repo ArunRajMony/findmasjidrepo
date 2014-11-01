@@ -212,11 +212,29 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${masjidDetailsInstance?.prayerTimings1}">
+				<g:if test="${masjidDetailsInstance?.prayerTimings1Hour}">
 				<li class="fieldcontain">
-					<span id="prayerTimings1-label" class="property-label"><g:message code="masjidDetails.prayerTimings1.label" default="Prayer Timings1" /></span>
+					<span id="prayerTimings1Hour-label" class="property-label"><g:message code="masjidDetails.prayerTimings1Hour.label" default="Prayer Timings1 Hour" /></span>
 					
-						<span class="property-value" aria-labelledby="prayerTimings1-label"><g:formatDate date="${masjidDetailsInstance?.prayerTimings1}" /></span>
+						<span class="property-value" aria-labelledby="prayerTimings1Hour-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayerTimings1Hour"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${masjidDetailsInstance?.prayerTimings1Minutes}">
+				<li class="fieldcontain">
+					<span id="prayerTimings1Minutes-label" class="property-label"><g:message code="masjidDetails.prayerTimings1Minutes.label" default="Prayer Timings1 Minutes" /></span>
+					
+						<span class="property-value" aria-labelledby="prayerTimings1Minutes-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayerTimings1Minutes"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${masjidDetailsInstance?.prayerTimings1AMPM}">
+				<li class="fieldcontain">
+					<span id="prayerTimings1AMPM-label" class="property-label"><g:message code="masjidDetails.prayerTimings1AMPM.label" default="Prayer Timings1 AMPM" /></span>
+					
+						<span class="property-value" aria-labelledby="prayerTimings1AMPM-label"><g:fieldValue bean="${masjidDetailsInstance}" field="prayerTimings1AMPM"/></span>
 					
 				</li>
 				</g:if>
