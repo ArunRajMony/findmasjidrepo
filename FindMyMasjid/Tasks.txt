@@ -1,0 +1,35 @@
+1. Region stuff - just like google regions 
+       Domain class 
+       Data 
+       
+2. the Search Box 
+       - AJAX for updating the value list of city , area
+       
+       
+3. Quick Links
+      - Domain class 
+      
+4. UpComing events 
+       - domain class 
+       - Detailed page 
+
+5) Articles
+      	- domain class
+      	- View All
+
+6) Downloads - 
+      	- domain class
+      	- View All
+
+7. Users 
+     - users with access to domain instance creation
+
+
+8. Bulk uploader of mosque locations
+     -- from a csv file 
+     
+.       
+    
+ 
+      
+      

@@ -51,7 +51,6 @@ grails.project.dependency.resolution = {
         // runtime 'mysql:mysql-connector-java:5.1.29'
         // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
         test "org.grails:grails-datastore-test-support:1.0-grails-2.4"
-		runtime "mysql:mysql-connector-java:5.1.31"
     }
 
     plugins {
@@ -64,9 +63,11 @@ grails.project.dependency.resolution = {
         compile ":asset-pipeline:1.8.11"
 
         // plugins needed at runtime but not for compilation
-        runtime ":hibernate4:4.3.5.4" // or ":hibernate:3.6.10.16"
+        //runtime ":hibernate4:4.3.5.4" // or ":hibernate:3.6.10.16"   removing since mongo needs to be the primary DB : refer 
         runtime ":database-migration:1.4.0"
         runtime ":jquery:1.11.1"
+		//for mongoDB
+		compile ":mongodb:3.0.1" // 3.0.2 has issues . but even after making it 3.0.1 it fails for cache plugin reasons. so disable that at as well "cache:1.1.17"
 
         // Uncomment these to enable additional asset-pipeline capabilities
         //compile ":sass-asset-pipeline:1.7.4"

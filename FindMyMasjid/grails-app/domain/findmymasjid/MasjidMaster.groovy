@@ -2,6 +2,8 @@ package findmymasjid
 
 class MasjidMaster {
 
+
+	
 	static constraints = {
 
 		masjidName nullable:false
