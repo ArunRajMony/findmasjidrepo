@@ -1,8 +1,11 @@
-package findmymasjid
+package org.findmymasjid
 
-class MasjidMaster {
+import java.util.Date;
+import java.util.Map;
 
+class MasjidDetails {
 
+	static mapWith = "mongo"
 	
 	static constraints = {
 
@@ -21,8 +24,9 @@ class MasjidMaster {
 		country nullable:false, inList:['India']
 		latitude nullable:true, matches:"^-?([1-8]?[1-9]|[1-9]0)\\.{1}\\d{1,6}"  // see http://www.regexlib.com/Search.aspx?k=latitude
 		longitude nullable:true, matches: "^-?([1]?[1-7][1-9]|[1]?[1-8][0]|[1-9]?[0-9])\\.{1}\\d{1,6}"
+		location nullable:true, display:false
 		googleLocationLink nullable:false,widget:'textarea' ,  url:true //matches:"Reg = /^https?\\:\\/\\/(www\\.|maps\\.)?google(\\.[a-z]+){1,2}\\/maps\\/?\\?([^&]+&)*(ll=-?[0-9]{1,2}\\.[0-9]+,-?[0-9]{1,2}\\.[0-9]+|q=[^&]+)+(\$|&)/;"
-		  //TODO use regular expression for validating a proper google maps link and not just an URI
+		  //TODO use regular expression for validating a proper google maps link and not just an "url:true"
 
 		phone1 nullable:false , matches:"^[0-9]*" ,  size: 10..14
 		phone2 nullable:true, matches:"^[0-9]*" , size: 10..14
@@ -95,6 +99,12 @@ class MasjidMaster {
 		otherInfo nullable:true, widget:'textarea'
 
 	}
+	
+	static mapping = {
+		pincode index:true
+		location geoIndex:'2d'
+	}
+
 
 	String masjidName
 	String addressLine1
@@ -106,6 +116,7 @@ class MasjidMaster {
 	String country
 	String latitude
 	String longitude
+	Map location  // http://grails.github.io/grails-data-mapping/mongodb/manual/guide/3.%20Mapping%20Domain%20Classes%20to%20MongoDB%20Collections.html#3.6.1%20Geospacial%202d%20Index%20Support
 	String googleLocationLink
 
 	String phone1
@@ -148,6 +159,12 @@ class MasjidMaster {
 	String landmark
 	String otherInfo
 
-
+	//location:[lat:13.0839d,long:80.2700d])
+	
+	Map getLocation(){
+		def map = ['lat' : latitude,'long' : longitude] 
+		return map
+	}
+	
 
 }

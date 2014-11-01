@@ -1,13 +1,13 @@
-package findmymasjid
+package org.findmymasjid
 
 
 
 import grails.test.mixin.*
 import spock.lang.*
 
-@TestFor(MasjidMasterController)
-@Mock(MasjidMaster)
-class MasjidMasterControllerSpec extends Specification {
+@TestFor(MasjidDetailsController)
+@Mock(MasjidDetails)
+class MasjidDetailsControllerSpec extends Specification {
 
     def populateValidParams(params) {
         assert params != null
@@ -21,8 +21,8 @@ class MasjidMasterControllerSpec extends Specification {
             controller.index()
 
         then:"The model is correct"
-            !model.masjidMasterInstanceList
-            model.masjidMasterInstanceCount == 0
+            !model.masjidDetailsInstanceList
+            model.masjidDetailsInstanceCount == 0
     }
 
     void "Test the create action returns the correct model"() {
@@ -30,7 +30,7 @@ class MasjidMasterControllerSpec extends Specification {
             controller.create()
 
         then:"The model is correctly created"
-            model.masjidMasterInstance!= null
+            model.masjidDetailsInstance!= null
     }
 
     void "Test the save action correctly persists an instance"() {
@@ -38,25 +38,25 @@ class MasjidMasterControllerSpec extends Specification {
         when:"The save action is executed with an invalid instance"
             request.contentType = FORM_CONTENT_TYPE
             request.method = 'POST'
-            def masjidMaster = new MasjidMaster()
-            masjidMaster.validate()
-            controller.save(masjidMaster)
+            def masjidDetails = new MasjidDetails()
+            masjidDetails.validate()
+            controller.save(masjidDetails)
 
         then:"The create view is rendered again with the correct model"
-            model.masjidMasterInstance!= null
+            model.masjidDetailsInstance!= null
             view == 'create'
 
         when:"The save action is executed with a valid instance"
             response.reset()
             populateValidParams(params)
-            masjidMaster = new MasjidMaster(params)
+            masjidDetails = new MasjidDetails(params)
 
-            controller.save(masjidMaster)
+            controller.save(masjidDetails)
 
         then:"A redirect is issued to the show action"
-            response.redirectedUrl == '/masjidMaster/show/1'
+            response.redirectedUrl == '/masjidDetails/show/1'
             controller.flash.message != null
-            MasjidMaster.count() == 1
+            MasjidDetails.count() == 1
     }
 
     void "Test that the show action returns the correct model"() {
@@ -68,11 +68,11 @@ class MasjidMasterControllerSpec extends Specification {
 
         when:"A domain instance is passed to the show action"
             populateValidParams(params)
-            def masjidMaster = new MasjidMaster(params)
-            controller.show(masjidMaster)
+            def masjidDetails = new MasjidDetails(params)
+            controller.show(masjidDetails)
 
         then:"A model is populated containing the domain instance"
-            model.masjidMasterInstance == masjidMaster
+            model.masjidDetailsInstance == masjidDetails
     }
 
     void "Test that the edit action returns the correct model"() {
@@ -84,11 +84,11 @@ class MasjidMasterControllerSpec extends Specification {
 
         when:"A domain instance is passed to the edit action"
             populateValidParams(params)
-            def masjidMaster = new MasjidMaster(params)
-            controller.edit(masjidMaster)
+            def masjidDetails = new MasjidDetails(params)
+            controller.edit(masjidDetails)
 
         then:"A model is populated containing the domain instance"
-            model.masjidMasterInstance == masjidMaster
+            model.masjidDetailsInstance == masjidDetails
     }
 
     void "Test the update action performs an update on a valid domain instance"() {
@@ -98,28 +98,28 @@ class MasjidMasterControllerSpec extends Specification {
             controller.update(null)
 
         then:"A 404 error is returned"
-            response.redirectedUrl == '/masjidMaster/index'
+            response.redirectedUrl == '/masjidDetails/index'
             flash.message != null
 
 
         when:"An invalid domain instance is passed to the update action"
             response.reset()
-            def masjidMaster = new MasjidMaster()
-            masjidMaster.validate()
-            controller.update(masjidMaster)
+            def masjidDetails = new MasjidDetails()
+            masjidDetails.validate()
+            controller.update(masjidDetails)
 
         then:"The edit view is rendered again with the invalid instance"
             view == 'edit'
-            model.masjidMasterInstance == masjidMaster
+            model.masjidDetailsInstance == masjidDetails
 
         when:"A valid domain instance is passed to the update action"
             response.reset()
             populateValidParams(params)
-            masjidMaster = new MasjidMaster(params).save(flush: true)
-            controller.update(masjidMaster)
+            masjidDetails = new MasjidDetails(params).save(flush: true)
+            controller.update(masjidDetails)
 
         then:"A redirect is issues to the show action"
-            response.redirectedUrl == "/masjidMaster/show/$masjidMaster.id"
+            response.redirectedUrl == "/masjidDetails/show/$masjidDetails.id"
             flash.message != null
     }
 
@@ -130,23 +130,23 @@ class MasjidMasterControllerSpec extends Specification {
             controller.delete(null)
 
         then:"A 404 is returned"
-            response.redirectedUrl == '/masjidMaster/index'
+            response.redirectedUrl == '/masjidDetails/index'
             flash.message != null
 
         when:"A domain instance is created"
             response.reset()
             populateValidParams(params)
-            def masjidMaster = new MasjidMaster(params).save(flush: true)
+            def masjidDetails = new MasjidDetails(params).save(flush: true)
 
         then:"It exists"
-            MasjidMaster.count() == 1
+            MasjidDetails.count() == 1
 
         when:"The domain instance is passed to the delete action"
-            controller.delete(masjidMaster)
+            controller.delete(masjidDetails)
 
         then:"The instance is deleted"
-            MasjidMaster.count() == 0
-            response.redirectedUrl == '/masjidMaster/index'
+            MasjidDetails.count() == 0
+            response.redirectedUrl == '/masjidDetails/index'
             flash.message != null
     }
 }

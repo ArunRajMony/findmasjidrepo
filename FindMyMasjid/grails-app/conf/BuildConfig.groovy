@@ -63,7 +63,7 @@ grails.project.dependency.resolution = {
         compile ":asset-pipeline:1.8.11"
 
         // plugins needed at runtime but not for compilation
-        //runtime ":hibernate4:4.3.5.4" // or ":hibernate:3.6.10.16"   removing since mongo needs to be the primary DB : refer 
+        runtime ":hibernate4:4.3.5.4" // NEED to have this, otherwise the generated views have the fields ordered alphabetically and not by the order in the constraints section 
         runtime ":database-migration:1.4.0"
         runtime ":jquery:1.11.1"
 		//for mongoDB
