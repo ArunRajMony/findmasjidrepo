@@ -7,7 +7,7 @@ a.2 in the controller modify the "create" method to create blank instances of th
 b. in the gsp page include the import tag 
      <%@ page import="org.findmymasjid.OnlyTime" %>
   
-c. for the create gsp use the following 
+c. for the create gsp use the following in the _form template
 
 		<div class="fieldcontain ${hasErrors(bean: eventDetailsInstance, field: 'eventDetailsInstance.onlyTimeNow', 'error')} required">
 			<label for="onlyTimeNow">
@@ -22,7 +22,7 @@ c. for the create gsp use the following
 		</div>
 
 d. for the edit gsp use the following 
-
+        No need of any additional change as the one made to _form suffices as edit also uses the same
 
 e. for the show gsp use the following 
 
@@ -37,5 +37,6 @@ e. for the show gsp use the following
 				</li>
 				</g:if>
 
+----------------------------------------------------------------------------------------------------------------------------------
 
      
