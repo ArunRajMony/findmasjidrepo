@@ -1,0 +1,41 @@
+How to use the "OnlyTime" class inside another domain ?
+
+a. make the property (say "onlyTimeNow") of type "OnlyTime" as embedded in the referred domain.
+
+a.2 in the controller modify the "create" method to create blank instances of the referred entity "onlyTimeNow"
+ 
+b. in the gsp page include the import tag 
+     <%@ page import="org.findmymasjid.OnlyTime" %>
+  
+c. for the create gsp use the following 
+
+		<div class="fieldcontain ${hasErrors(bean: eventDetailsInstance, field: 'eventDetailsInstance.onlyTimeNow', 'error')} required">
+			<label for="onlyTimeNow">
+				<g:message code="eventDetails.onlyTimeNow.label" default="only time " />
+				<span class="required-indicator">*</span>
+			</label>
+			<g:select name="onlyTimeNow.hour" from="${eventDetailsInstance.onlyTimeNow.constraints.hour.inList}"  required="" value="${fieldValue(bean: eventDetailsInstance, field: 'onlyTimeNow.hour')}"/>
+			<b>:</b> 
+			<g:select name="onlyTimeNow.minutes" from="${eventDetailsInstance.onlyTimeNow.constraints.minutes.inList}" required="" value="${fieldValue(bean: eventDetailsInstance, field: 'onlyTimeNow.minutes')}" />
+			<g:select name="onlyTimeNow.ampm" from="${eventDetailsInstance.onlyTimeNow.constraints.ampm.inList}" required="" value="${fieldValue(bean: eventDetailsInstance, field: 'onlyTimeNow.ampm')}" />
+		
+		</div>
+
+d. for the edit gsp use the following 
+
+
+e. for the show gsp use the following 
+
+				<g:if test="${eventDetailsInstance?.onlyTimeNow}">
+				<li class="fieldcontain">
+					<span id="onlyTimeNow-label" class="property-label"><g:message code="eventDetails.onlyTimeNow.label" default="Event Start Time" /></span>
+					
+						<span class="property-value" aria-labelledby="onlyTimeNowHour-label"><g:fieldValue bean="${eventDetailsInstance}" field="onlyTimeNow.hour"/>
+						<b> : </b><g:fieldValue bean="${eventDetailsInstance}" field="onlyTimeNow.minutes"/>
+						<g:fieldValue bean="${eventDetailsInstance}" field="onlyTimeNow.ampm"/></span>
+					
+				</li>
+				</g:if>
+
+
+     
